@@ -1,0 +1,16 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    background-color: #ADD2C2;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; 
+    text-align: center;
+    flex-direction: column; 
+}
+
+
