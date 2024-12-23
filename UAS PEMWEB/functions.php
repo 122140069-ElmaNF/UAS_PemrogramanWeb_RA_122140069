@@ -139,12 +139,19 @@ function login($username, $password) {
 
 // Fungsi untuk menangani proses logout
 function logout() {
-    // Menghapus semua data sesi
-    $_SESSION = [];
-    
-    // Menghapus sesi yang tersimpan
+    // Hapus semua data sesi
     session_unset();
     session_destroy();
+
+    // Hapus semua cookie
+    if (isset($_SERVER['HTTP_COOKIE'])) {
+        $cookies = explode(';', $_SERVER['HTTP_COOKIE']);
+        foreach ($cookies as $cookie) {
+            $parts = explode('=', $cookie);
+            $name = trim($parts[0]);
+            setcookie($name, '', time() - 3600, '/'); // Hapus cookie dengan mengatur waktu kadaluwarsa
+        }
+    }
 }
 
 ?>
