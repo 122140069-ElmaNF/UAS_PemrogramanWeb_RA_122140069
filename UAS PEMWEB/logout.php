@@ -2,7 +2,7 @@
 session_start();
 require 'functions.php';
 
-// Memanggil fungsi logout untuk menghapus sesi dan menghentikan sesi pengguna
+// Memanggil fungsi logout untuk menghapus sesi dan cookie
 logout();
 ?>
 
