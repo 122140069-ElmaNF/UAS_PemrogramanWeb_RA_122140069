@@ -37,6 +37,12 @@ Gambar di bawah ini merupakan database yang saya gunakan. Saya membuat database 
 
 <img src="https://github.com/user-attachments/assets/8f38d31b-5223-48d0-b69b-b0418d0f346d" alt="Database" width="500">
 
+<img src="https://github.com/user-attachments/assets/fdd2f5d1-0efe-4723-b8d3-503f4edc21a7" alt="database" width="500">
+
+<img src="https://github.com/user-attachments/assets/b994987c-f9a6-40da-8c87-263eb64c5653" alt="database" width="500">
+
+
+
 Kemudian dilakukan koneksi untuk menghubungkan database dengan script PHP:
 
 <img src="https://github.com/user-attachments/assets/103c528b-b317-4066-9814-7cb064a65c85" alt="Koneksi Database" width="500">
