@@ -4,6 +4,13 @@ require 'functions.php';
 
 $error = '';
 
+// Jika cookie login ada dan valid
+if (isset($_COOKIE['login']) && $_COOKIE['login'] === 'true') {
+    $_SESSION['login'] = true;
+    header("Location: index.php");
+    exit();
+}
+
 // Menangani proses login
 if (isset($_POST["login"])) {
     // Ambil data dari form
@@ -19,8 +26,17 @@ if (isset($_POST["login"])) {
 
         // Verifikasi password
         if (password_verify($password, $row["password"])) {
-            // Jika login berhasil, set session dan arahkan ke halaman index
+            // Jika login berhasil, set session
             $_SESSION["login"] = true;
+
+            // Periksa apakah opsi "Remember me" dipilih
+            if (isset($_POST['remember'])) {
+                // Set cookie untuk username dan sesi login
+                setcookie('username', $username, time() + (86400 * 30), "/"); // Cookie berlaku 30 hari
+                setcookie('login', 'true', time() + (86400 * 30), "/");
+            }
+
+            // Arahkan ke halaman index
             header("Location: index.php");
             exit();
         } else {
