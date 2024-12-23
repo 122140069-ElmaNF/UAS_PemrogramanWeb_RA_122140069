@@ -53,6 +53,13 @@ Lalu saya memanipulasi data dengan menggunakan CRUD:
 
 
 ## Bagian 4: State Management
+
+Pengelolaan state dengan cookie:
+
+<img src="https://github.com/user-attachments/assets/3e2661cd-907d-432b-a722-0995dfebb33b" alt="cookie" width="600">
+
+<img src="https://github.com/user-attachments/assets/ff03b667-beba-4341-8a0e-ef10b17a0370" alt="cookie" width="600">
+
 Saya menggunakan session untuk menyimpan dan mengelola state seperti **session_start** untuk menyimpan informasi pengguna:
 
 <img src="https://github.com/user-attachments/assets/db071ccc-079c-4465-ae44-8e4df61cf3ba" alt="Session Management" width="300">
